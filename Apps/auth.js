@@ -13,32 +13,31 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
+const auth = getAuth();
 
 
 
-
-///////////////////////////   Signup New User Scripts ///////////////////////
-
-let signupBtn = document.getElementById("register-btn")
-signupBtn.addEventListener("click", function () {
-    const auth = getAuth();
+let register = document.getElementById("register-btn")
+register.addEventListener("click", function b(){
     let email = document.getElementById("email")
     let password = document.getElementById("password")
-    createUserWithEmailAndPassword(auth, email.value, password.value)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            alert("Register")
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            alert("Not bro")
+    console.log(email.value,password.value)
+  createUserWithEmailAndPassword(auth, email.value, password.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    alert("NOT DONE")
+    console.log(user)
 
-        });
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert("done")
+    // ..
+  });
+
 })
 
 // //////////////////SignUp Process Ends /////////////////////////////
