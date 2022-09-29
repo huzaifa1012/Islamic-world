@@ -1,0 +1,192 @@
+body {
+    /* background-color: orange; */
+    margin: 0%;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: cover;
+    background-color: black;
+}
+.wrapofallbody {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.201); */
+    /* color: ; */
+}
+header {
+    font-family: Century Gothic;
+    
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: space-evenly;
+    color: white;
+    background-color:rgb(0, 0, 93);
+}
+#head-logo {
+    width: 100px;
+}
+header h1 {
+    margin: 10px;
+
+}
+header ul {
+    /* margin: auto; */
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center ;
+    padding: 0px;
+}
+header ul li {
+    /* margin: auto; */
+    cursor: pointer;
+    margin: 0px 20px 0px 20px;
+    align-items: center;
+}
+
+
+
+.hero{
+    /* height: 00px; */
+    padding: 10px;
+    font-family: absulat;
+    margin: 150px auto;
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+
+.right {
+    width: 510px;   
+}
+.left {
+    width: 490px;
+}
+
+
+
+#main-para {
+    color: white;
+    width: 400px;
+    margin-top:-10px ;
+    font-size:20px ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.reg-box{
+    background-color: rgba(0, 0, 0, 0.645);
+    width: 420px;
+    display: grid;
+    padding: 40px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 8px black;
+    border-radius: 5px;
+
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.387);
+    font-family: Century Gothic ;
+}
+.inp-box {
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid  white ;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.168);
+    color: white;
+    font-family: Century Gothic;
+    font-size: 20px;
+    padding: 17px;
+    border-radius:5px;
+}
+.signin-btn{
+    background-color: rgba(255, 255, 255, 0.942);
+    width: auto;
+    border: none;
+    padding: 15px;
+    border-radius:5px;
+    cursor: pointer;
+    font-size: 19px;
+}
+.signin-btn:hover {
+    box-shadow: 2px 2px 8px black;
+    background-color: rgb(255, 255, 255);
+
+}
+.forget-link {
+    margin: auto;
+    font-family: Century Gothic ;
+    color: white;
+    /* text-shadow: 2px 0px 8px white; */
+    font-size: 18px;
+    text-decoration: solid;
+}
+.forget-link:hover {
+    text-decoration: underline;
+}
+
+#hr-on-main {
+    width: 400px;
+    /* border: none; */
+    color: white;
+    size: 20px;
+    border-color: white;
+    margin-top: 0%;
+}
+
+.signup-btn{
+    width: auto;
+    border: none;
+    padding: 15px;
+    color: white;
+    background-color: rgb(0, 0, 93)  ;
+    border-radius:5px;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.signup-btn:hover {
+    box-shadow: 2px 2px 8px black;
+    background-color: rgb(1, 1, 122);
+ }
+
+
+
+
+.instagram {
+    display: inline-block;
+    width: 20px;
+    /* height: 10px; */
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 10px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  }
+
+  .facebook {
+    display: inline-block;
+    width: 20px;
+    /* height: 10px; */
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 10px;
+    vertical-align: middle;
+    background: rgb(18, 0, 213);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  }
