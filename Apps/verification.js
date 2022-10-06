@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,8 +35,8 @@ verifiedButten.addEventListener("click", function () {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/firebase.User
             console.log("Greate")
-            console.log(user.uid)
-            console.log(user.emailVerified)
+            // console.log(user.uid)
+            // console.log(user.emailVerified)
             if (user.emailVerified == true) {
                 window.location.href = ("./main.html")
                 console.log("Your Email Is verified")
@@ -45,7 +45,7 @@ verifiedButten.addEventListener("click", function () {
             // User is signed out
             // ...
             // window.location.href = ("https://www.youtube.com/")
-            alert("Your Email Is verified")
+            // alert("Your Email Is Not verified")
 
             console.log("You'r Email Is'nt Verified ")
         }}   
@@ -53,6 +53,24 @@ verifiedButten.addEventListener("click", function () {
             // ...
         
     });
+
+
+
+
+})
+
+
+
+
+let resendEmailVerif = document.getElementById("resend")
+resendEmailVerif.addEventListener("click", function(){
+    const auth = getAuth();
+sendEmailVerification(auth.currentUser)
+  .then(() => {
+    // Email verification sent!
+    // ...
+  });
+  console.log("We've Sent Again You An Verification Email")
 
 })
 
