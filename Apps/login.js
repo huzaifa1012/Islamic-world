@@ -26,19 +26,24 @@ signIn.addEventListener("click", function () {
   let userEmail = document.getElementById("signin-email")
   let userPassword = document.getElementById("signin-password")
   // const auth = getAuth();
-  signInWithEmailAndPassword(auth, userEmail.value, userPassword.value)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log("Alhamdulillah")
-      alert("GOOD")
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log("Please Again")
-    });
+    signInWithEmailAndPassword(auth, userEmail.value, userPassword.value)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log("Alhamdulillah")
+        alert("GOOD")
+        
+        window.location.assign("./indexes/main.html")
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("Please Again")
+      });
 
 })
 
+
+//////////////////////////////////////

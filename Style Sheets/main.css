@@ -22,6 +22,12 @@ header {
     background-color: rgba(0, 0, 93, 0.792);
 }
 
+#user-icon {
+    
+    align-self: center;
+    width: 3em;
+    height: 3em;
+}
 
 header ul {
     /* margin: auto; */
