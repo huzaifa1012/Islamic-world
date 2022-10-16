@@ -32,7 +32,7 @@ signIn.addEventListener("click", function () {
         const user = userCredential.user;
         console.log("Alhamdulillah")
         alert("GOOD")
-        
+      
         window.location.assign("./indexes/main.html")
 
         // ...

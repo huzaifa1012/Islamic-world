@@ -1,10 +1,11 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, onAuthStateChanged, sendEmailVerification, deleteUser} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyCH5jAE34BjXH1LHmYnyRwY3GtL37PNvfE",  
   authDomain: "joinislamic.firebaseapp.com",
@@ -18,18 +19,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getFirestore()
+
 const user = auth.currentUser;
 
+/////////////////
 
-//////////////////
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        console.log(user)
-        // console.log(user.uid)
-        // console.log(user.emailVerified)
+                console.log(user)
         if (user.emailVerified == true) {
             // window.location.href = ("./main.html")
             console.log(`                      And Is Awesome       
@@ -44,14 +43,10 @@ onAuthStateChanged(auth, (user) => {
 
         }
      else {
-      
-        // User is signed out
-        // ...
-        // window.location.href = ("https://www.youtube.com/")
-        alert("Your Email Is Not verified")
-        
+      console.log("Your Email Is Not verified")
         sendEmailVerification(auth.currentUser)
         .then(() => {
+            console.log(" A New Verification Mail Sent")
             // Email verification sent!
             // ...
         });
@@ -62,6 +57,45 @@ onAuthStateChanged(auth, (user) => {
         // ...
     
 });
+onAuthStateChanged(auth, (user) =>{
+    if (user){
+        console.log("USER IS CURRENTLY SIGNED In")
+    }   
+    else {
+        console.log("You'r Not Here")
+        window.location.href = ("../index.html")
+    }
+
+
+
+})
+
+
+let signOut = document.getElementById("logout-icon")
+signOut.addEventListener("click", function(){
+
+
+
+    auth.signOut().then(alert("Hurry"))
+})
+
+
+
+        const docRef = doc(db, "greek", "YWpZSEHsIPxLgczTrlyt" );
+  const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data().email);
+        docSnap.data()
+        let abc = docSnap.data().firstName 
+        let huzaifa = document.querySelector("#huzaifa")
+        huzaifa.innerHTML = abc
+
+    }
+
+    // console.log(auth.currentUser.uid + "ASD")
+
+
+
 
 
 

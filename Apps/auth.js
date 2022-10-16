@@ -69,18 +69,27 @@ newRegister.addEventListener("click", adding)
 let userEmail = document.querySelector("#email");
 let userPassword = document.querySelector("#password");
 
+// Here Im Exporting Data Of User To Access It AnyWhere On WEB
+export let firstName;
+export let lastName;
+export let email;
+export let securityKey;
+// 
+
+
 async function adding() {
   // Add a new document with a generated id.
-  
+
   let firstName = document.querySelector("#firstname")
   let lasttName = document.querySelector("#lastname")
 
-  const docRef = await addDoc(collection(db, "greek"), {
+
+  const docRef = await addDoc(collection(db, "users"), {
     firstName: firstName.value,
     lastName: lasttName.value,
     email: userEmail.value,
     securityKey: userPassword
-    
+
   });
   console.log("Document written with ID: ", docRef.id);
 

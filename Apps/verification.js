@@ -35,8 +35,8 @@ function autochecking() {
             console.log("You'r Registering Greate , Now We Are Verifying Your Email")
             // console.log(user.emailVerified)
             if (user.emailVerified == true) {
-                window.location.href = ("./main.html")
                 console.log("Your Email Is verified")
+                window.location.href = ("./main.html")
             }
             else {
                 // User is signed out
@@ -44,7 +44,7 @@ function autochecking() {
                 // window.location.href = ("https://www.youtube.com/")
                 // alert("Your Email Is Not verified")
 
-                console.log("You'r Email Is'nt Verified ")
+                console.log("You'r Email Is'nt Verified")
             }
         
         const uid = user.uid;

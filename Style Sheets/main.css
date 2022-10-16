@@ -1,11 +1,12 @@
 body {
-    background-color:black;
+    background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0%;
-    
+
 }
+
 .main-wrap {
     /* height: 100vh; */
     background-color: rgba(0, 0, 0, 0.327);
@@ -23,11 +24,18 @@ header {
 }
 
 #user-icon {
-    
+
     align-self: center;
     width: 3em;
     height: 3em;
 }
+#logout-icon {
+
+    align-self: center;
+    width: 3em;
+    height: 3em;
+}
+
 
 header ul {
     /* margin: auto; */
@@ -59,57 +67,83 @@ header ul li {
 
 .hero {
 
-    /* padding  : 10px; */
+    padding: 10px;
     font-family: absulat;
-    margin: 0px auto;
-    display: flex;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
+    /* margin: 0px auto; */
+    /* display: flex; */
+    /* margin: 0px auto; */
+    /* flex-wrap: wrap;/ */
+    align-items: center;
 }
 
 
 
 .left {
     /* margin-top: 40px; */
-    
+
     width: 400px;
 }
+
 /* 
 .right {
 }   */
 
 .hero h1 {
-    margin: 0px auto;
     align-items: center;
-    letter-spacing: 1px;
     text-align: center;
+    letter-spacing: 1px;
     font-size: 30px;
     color: white;
-    /* font-family: Big Daddy St; */
-    font-family: Brolink DEMO;
-    margin-bottom:5px ;
-    margin-top:5px ;
-
+    font-family: Big Daddy St;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* width: 2000px; */
     text-shadow: 2px 2px 4px black;
 }
-#register-font{
+
+#mainPara {
+    background-color: #ff15007c;
+    /* width: 900px; */
+    padding: 10px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+#Note {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+#register-font {
     /* border-bottom: 2px solid rgb(0, 0, 253); */
     color: white;
 }
 
-#Here-font{
+#Here-font {
     /* border-bottom: 2px solid white; */
     color: white;
 }
+
 #main-para {
     color: white;
     width: 100%;
     margin-top: -10px;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
 
 .wrap-reg {
@@ -132,12 +166,12 @@ header ul li {
     align-items: center;
     align-self: center;
     margin: 0px auto;
-    
+
 }
 
 .reg-left {
     margin-top: 30px;
-    
+
 }
 
 .reg-right {
@@ -176,7 +210,7 @@ header ul li {
 .signin-btn:hover {
     box-shadow: 2px 2px 8px black;
     background-color: rgb(255, 255, 255);
-    
+
 }
 
 .forget-link {
@@ -220,7 +254,7 @@ header ul li {
     margin: 0px auto;
     display: flex;
     margin: 7px;
-    
+
     justify-content: center;
     align-items: center;
     width: 270px;
@@ -275,8 +309,8 @@ header ul li {
 
 
 
-.div3rd{
-    background-color:rgba(255, 255, 255, 0.663);
+.div3rd {
+    background-color: rgba(255, 255, 255, 0.663);
     padding: 30px;
     margin: 0%;
     /* display: block; */
@@ -290,18 +324,20 @@ header ul li {
 
 
 #how-heading {
-    font-size:150%;
-    font-family:Century Gothic ;
+    font-size: 150%;
+    font-family: Century Gothic;
 }
-#how-paragraph{
-    width :100%;
+
+#how-paragraph {
+    width: 100%;
     font-size: 20px;
     /* padding: 20px; */
     /* color: white; */
 }
-.div4th{
+
+.div4th {
     padding: 20px;
-    background-color:rgba(0, 0, 93, 0.792) ;
+    background-color: rgba(0, 0, 93, 0.792);
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -310,19 +346,21 @@ header ul li {
     color: rgb(255, 255, 255);
 
 }
+
 @media screen and (min-width: 2560px) {
 
-    .div4th{
+    .div4th {
         height: 100vh;
     }
-    
-  }
+
+}
 
 .row1 {
     width: 300px;
     margin: 20px;
     /* align-content: center; */
 }
+
 .row2 {
     margin: 20px;
     /* align-items: center; */
@@ -333,8 +371,52 @@ header ul li {
     margin: 20px;
     width: 300px;
 }
+
 .div4th a {
-    color: white;
+
     text-decoration: none;
-    font-family: Century Gothic  ;
+    font-family: Century Gothic;
+}
+
+.box-container {
+    display: flex;
+    /* width: 100vw; */
+    flex-wrap: wrap;
+    /* margin-left: 67px; */
+    /* margin-right: 67px; */
+    justify-content: space-around;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    align-self: center;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    margin: 2%;
+    border-radius: 5px;
+    padding: 20px;
+    background: -webkit-linear-gradient(top left, #3139FF, #01176A);
+    background: -moz-linear-gradient(top left, #3139FF, #01176A);
+    background: linear-gradient(to bottom right, #3139FF, #01176A);
+}
+
+.box1:hover {
+    /* background: rgba(0, 0, 138, 0.808); */
+    cursor: pointer;
+}
+
+#box-p {
+    font-size: 35px;
+    margin: 0% auto;
+    align-self: center;
+}
+
+.box1 {
+    background-image:url("../IMG/wudu illustrator.jfif") ;
+    background-position: center;
+    background-size: cover;
 }
