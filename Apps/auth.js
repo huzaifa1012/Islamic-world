@@ -2,8 +2,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
-
+import { getFirestore, collection, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 
 
@@ -22,29 +21,50 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+const auth = getAuth(app);
 const db = getFirestore(app)
 
-
+let expemail
 let register = document.getElementById("RegisterBtn");
 register.addEventListener("click", function () {
 
+let email 
+  let firstName = document.querySelector("#firstname")
+  let lasttName = document.querySelector("#lastname")
   let userEmail = document.querySelector("#email");
   let userPassword = document.querySelector("#password");
-
+  
   createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log("Greate")
-
-      sendEmailVerification(auth.currentUser)
-        .then(() => {
-          // Email verification sent!
-          window.location.href = ("./verification.html")
-
-          // ...
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log("Account Created")
+    
+    // Saving Data On Firestore When User's registering.//
+    try {
+      savingDataOnFirestore()
+      async function savingDataOnFirestore() {
+        const docRef = await addDoc(collection(db, "My Users"), {
+          firstName: firstName.value,
+          lastName: lasttName.value,
+          email: userEmail.value,
+          uid: auth.currentUser.uid,
         });
+        console.log("Document written with ID: ", docRef.id);
+      }
+    }
+    catch (error) {
+      console.log("Sorry We Cant Save data on firestore")
+    }
+    
+    sendEmailVerification(auth.currentUser)
+      .then(() => {
+        // Email verification sent!
+        
+        window.location.href = ("./verification.html")
+        
+        // ...
+      });
 
 
       // ...
@@ -56,41 +76,40 @@ register.addEventListener("click", function () {
       console.log("Oops")
 
     });
+    
+    
+    
+  })
+  expemail = document.querySelector("#email");      
+  export {expemail}
 
-})
-
+  
 // SignUp Process Ends /////////////////////
 
 
 
-let newRegister = document.getElementById("RegisterBtn");
-newRegister.addEventListener("click", adding)
-// adding()
-let userEmail = document.querySelector("#email");
-let userPassword = document.querySelector("#password");
+// let newRegister = document.getElementById("RegisterBtn");
+// newRegister.addEventListener("click", adding)
+// // adding()
 
-// Here Im Exporting Data Of User To Access It AnyWhere On WEB
-export let firstName;
-export let lastName;
-export let email;
-export let securityKey;
-// 
+// // Here Im Exporting Data Of User To Access It AnyWhere On WEB
+// export let firstName;
+// export let lastName;
+// export let email;
+// export let securityKey;
+// //
 
 
-async function adding() {
-  // Add a new document with a generated id.
+// async function adding() {
+//   // Add a new document with a generated id.
 
-  let firstName = document.querySelector("#firstname")
-  let lasttName = document.querySelector("#lastname")
+//   const docRef = await addDoc(collection(db, "users"), {
+//     firstName: firstName.value,
+//     lastName: lasttName.value,
+//     email: userEmail.value,
+//     securityKey: userPassword
 
+//   });
+//   console.log("Document written with ID: ", docRef.id);
 
-  const docRef = await addDoc(collection(db, "users"), {
-    firstName: firstName.value,
-    lastName: lasttName.value,
-    email: userEmail.value,
-    securityKey: userPassword
-
-  });
-  console.log("Document written with ID: ", docRef.id);
-
-}
+// }
