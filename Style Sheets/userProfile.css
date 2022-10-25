@@ -1,4 +1,262 @@
 body {
-    background-color: brown;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+
 }
 
+.main-wrap {
+    /* height: 100vh; */
+    background-color: rgba(0, 0, 0, 0.327);
+}
+
+header {
+    border-bottom: 1px solid white;
+    font-family: Century Gothic;
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+    background-color: rgba(0, 0, 93, 0.792);
+}
+
+#user-icon {
+
+    align-self: center;
+    width: 3em;
+    height: 3em;
+}
+#logout-icon {
+
+    align-self: center;
+    width: 3em;
+    height: 3em;
+}
+
+
+header ul {
+    /* margin: auto; */
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+header ul li {
+    cursor: pointer;
+    margin: 0px 20px 0px 20px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/*  header Section Ends Here */
+
+
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.836);
+    text-align: center;
+    padding: 10px;
+    font-family:  Century Gothic;
+    color: white;    
+}
+.wrap-box {
+    margin: auto;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,0.7203256302521008) 0%, rgba(0,1,255,0.8239670868347339) 100%);
+    border-radius: 20px;
+    /* width: 300px; */
+    height: auto;
+    padding-bottom: 20px;
+
+
+
+}
+#user-name, #user-email {
+    color: white;
+}
+#user-uid {
+color: orangered;
+font-size: 15px;
+}
+
+
+a {
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.387);
+    font-family: Century Gothic;
+}
+/* 
+.inp-box {
+    margin: 10px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.168);
+    color: white;
+    font-family: Century Gothic;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+.div3rd {
+    background-color: rgba(255, 255, 255, 0.747);
+    padding: 30px;
+    margin: 0%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #01176A;
+    /* display: block; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* align-self: center; */
+    text-align: center;
+    /* height: 200px; */
+}
+#mobile-app-img {
+    width: 140px;
+    
+
+}
+
+#get-reward-img {
+    width: 140px;
+}
+
+
+#how-heading {
+    font-size: 150%;
+    font-family: Century Gothic;
+}
+
+#how-paragraph {
+    width: 300px;
+    font-size: 16px;
+    font-family: Century Gothic;
+    margin-top:-12px ;
+    margin-bottom:8px ;
+    color: black;
+}
+#feature-btn {
+    padding: 10px;
+    width: 200px;
+    font-family: Century Gothic;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 153, 0.849);
+    border-bottom: 2px solid white;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+#feature-btn:hover {
+    background-color: #3e8e41;
+    color: white;
+    cursor: pointer;
+
+  }
+
+.div4th {
+    padding: 20px;
+    background-color: rgba(0, 0, 93, 0.596);
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    font-family: Century Gothic;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+
+}
+
+@media screen and (min-width: 2560px) {
+
+    .div4th {
+        height: 100vh;
+    }
+
+}
+
+.row1 {
+    width: 300px;
+    margin: 20px;
+    /* align-content: center; */
+}
+
+.row2 {
+    margin: 20px;
+    /* align-items: center; */
+    width: 300px;
+}
+
+.row3 {
+    margin: 20px;
+    width: 300px;
+}
+
+.div4th a {
+
+    text-decoration: none;
+    font-family: Century Gothic;
+}
+
+.box-container {
+    display: flex;
+    /* width: 100vw; */
+    flex-wrap: wrap;
+    /* margin-left: 67px; */
+    /* margin-right: 67px; */
+    justify-content: space-around;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    align-self: center;
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    margin: 2%;
+    border-radius: 5px;
+    padding: 20px;
+    background: -webkit-linear-gradient(top left, #3139FF, #01176A);
+    background: -moz-linear-gradient(top left, #3139FF, #01176A);
+    background: linear-gradient(to bottom right, #3139FF, #01176A);
+}
+
+.box1:hover {
+    /* background: rgba(0, 0, 138, 0.808); */
+    cursor: pointer;
+}
+
+#box-p {
+    font-size: 35px;
+    margin: 0% auto;
+    align-self: center;
+}
+
+.box1 {
+    background-image:url("../IMG/wudu illustrator.jfif") ;
+    background-position: center;
+    background-size: cover;
+}

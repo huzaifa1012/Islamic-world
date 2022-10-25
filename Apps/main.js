@@ -24,10 +24,25 @@ const db = getFirestore()
 const user = auth.currentUser;
 
 /////////////////
+let warnDiv = document.querySelector("#warnDiv")
+let warnColse = document.querySelector("#warnBtn")
+warnColse.addEventListener('click', function(){
+    warnDiv.style.display = "none"
+}) 
+
+
+
+
 
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
+        
+
+
+
+    
+    
                 console.log(user)
         if (user.emailVerified == true) {
             // window.location.href = ("./main.html")

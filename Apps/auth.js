@@ -36,15 +36,11 @@ let email
   
   createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
   .then((userCredential) => {
-    // Signed in 
     const user = userCredential.user;
-    console.log("Account Created")
     
-    // Saving Data On Firestore When User's registering.//
-    try {
-      savingDataOnFirestore()
-      async function savingDataOnFirestore() {
-        const docRef = await addDoc(collection(db, "My Users"), {
+     savingDataOnFirestore()
+    function savingDataOnFirestore() {
+        const docRef = addDoc(collection(db, "user"), {
           firstName: firstName.value,
           lastName: lasttName.value,
           email: userEmail.value,
@@ -52,10 +48,15 @@ let email
         });
         console.log("Document written with ID: ", docRef.id);
       }
-    }
-    catch (error) {
-      console.log("Sorry We Cant Save data on firestore")
-    }
+
+
+
+
+    
+    console.log("Account Created")
+    
+    // Saving Data On Firestore When User's registering.//
+    
     
     sendEmailVerification(auth.currentUser)
       .then(() => {
@@ -74,15 +75,15 @@ let email
       const errorMessage = error.message;
       // ..
       console.log("Oops")
+   
+        console.log("Sorry We Cant Save data on firestore")
+      
 
     });
     
     
     
   })
-  expemail = document.querySelector("#email");      
-  export {expemail}
-
   
 // SignUp Process Ends /////////////////////
 
